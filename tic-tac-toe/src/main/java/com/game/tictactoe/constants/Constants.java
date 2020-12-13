@@ -5,8 +5,8 @@ public class Constants {
 	/**
 	 * Player constants
 	 */
-	public static final String MSG_WINS = "\nPLAYER %s WON\n";
-	public static final String MSG_NONE_WINS = "GAME ENDS WITH A DRAW";
+	public static final String MSG_WINS = "\nPLAYER %s WON!\n";
+	public static final String MSG_NONE_WINS = "GAME ENDS WITH A DRAW!";
 
 	public static final char CHAR_X = 'X';
 	public static final char CHAR_O = 'O';
@@ -17,6 +17,7 @@ public class Constants {
 	 */
 	public static final String MSG_INITIAL_PROMPT = "Please enter the size of the board:";
 	public static final String MSG_BOARD_CREATION_SUCCESS = "Board Created.\nThe game will start with player X\n";
+	public static final String MSG_GAME_BOARD_CREATION = "Game board creation...";
 	public static final String MSG_YOUR_MOVE_PROMPT = "Hi player %s, enter your cell:";
 	public static final String MSG_ENTER_ROW_PROMPT = "Enter row:";
 	public static final String MSG_ENTER_COL_PROMPT = "Enter column:";

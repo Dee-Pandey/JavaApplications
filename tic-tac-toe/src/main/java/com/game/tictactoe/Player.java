@@ -41,7 +41,7 @@ public class Player {
 				} else {
 					gameBoard.fillPlayerSymbolAtPosition(row, col, playerName);
 					System.out.println("");
-					System.out.println("player " + playerName + ":");
+					System.out.println("Player " + playerName + ":");
 					break;
 				}
 			} else {
@@ -53,7 +53,6 @@ public class Player {
 
 	public void celebrateVictory() {
 		System.out.println();
-		gameBoard.display();
 		System.out.println(String.format(Constants.MSG_WINS, playerName));
 	}
 

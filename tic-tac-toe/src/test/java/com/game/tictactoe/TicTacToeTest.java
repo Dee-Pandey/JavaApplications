@@ -11,7 +11,7 @@ public class TicTacToeTest
     extends TestCase
 {
 	@Test
-	public void testSize()
+	public void testSizeOfBoard()
 	{
 		Game game = new Game();
 		game.createGameBoard(3);
@@ -64,7 +64,6 @@ public class TicTacToeTest
 		game.getGameBoard().fillPlayerSymbolAtPosition(1, 2, PlayerSymbol.X);
 		game.getGameBoard().fillPlayerSymbolAtPosition(1, 3, PlayerSymbol.X);
 		Judge judge = new Judge(game.getGameBoard());
-		
 		assertEquals(true, judge.isGameComplete());
 	}
 }

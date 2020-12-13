@@ -26,14 +26,14 @@ public class GameRunner {
 					game.startGame();
 					scan.close();
 					break;
-				}
-				}
+				}}
 				x=2;
 				}
 	
 			catch (GameException ge) {
+				System.out.println();
 				System.out.println(ge.getLocalizedMessage());
-				break;										//Here break stops game once game is drawn.
+				break;										
 			}catch(NumberFormatException e){
 				System.out.println(Constants.ERR_INVALID_TYPE);
 			}catch(InputMismatchException e){

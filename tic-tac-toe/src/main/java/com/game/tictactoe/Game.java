@@ -37,7 +37,9 @@ public class Game {
 	}
 
 	public void startGame() {
+		System.out.println(Constants.MSG_GAME_BOARD_CREATION);
 		gameBoard.display();
+		System.out.println();
 		System.out.println(Constants.MSG_BOARD_CREATION_SUCCESS);
 
 		Player playerX = new Player(PlayerSymbol.X, this.gameBoard);
