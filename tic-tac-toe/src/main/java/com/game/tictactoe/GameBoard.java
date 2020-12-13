@@ -1,6 +1,6 @@
 package com.game.tictactoe;
 
-import com.game.tictactoe.constants.Cons;
+import com.game.tictactoe.constants.Constants;
 
 public class GameBoard {
 
@@ -56,17 +56,17 @@ public class GameBoard {
 	}
 
 	/**
-	 * Given a playerName it fetch the symbol associated
+	 * Given a playerName, it fetches the symbol associated
 	 * 
 	 * @param playerName
 	 * @return
 	 */
 	private char fetchPlayerSymbol(String playerName) {
-		char symbol = Cons.CHAR_SPACE;
-		if (playerName.equals(Cons.PLAYER_X)) {
-			symbol = Cons.CHAR_X;
-		} else if (playerName.equals(Cons.PLAYER_O)) {
-			symbol = Cons.CHAR_O;
+		char symbol = Constants.CHAR_SPACE;
+		if (playerName.equals(Constants.PLAYER_X)) {
+			symbol = Constants.CHAR_X;
+		} else if (playerName.equals(Constants.PLAYER_O)) {
+			symbol = Constants.CHAR_O;
 		}
 		return symbol;
 	}
@@ -79,7 +79,7 @@ public class GameBoard {
 	 * @return
 	 */
 	private boolean isPositionAlreadyFilled(int row, int col) {
-		return gameGrid[row][col] == Cons.CHAR_X || gameGrid[row][col] == Cons.CHAR_O;
+		return gameGrid[row][col] == Constants.CHAR_X || gameGrid[row][col] == Constants.CHAR_O;
 	}
 
 	public void display() {

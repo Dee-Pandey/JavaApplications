@@ -2,7 +2,7 @@ package com.game.tictactoe.constants;
 
 import com.game.tictactoe.Player;
 
-public class Cons {
+public class Constants {
 
 	/**
 	 * Player constants
@@ -25,6 +25,7 @@ public class Cons {
 	public static final String MSG_ENTER_ROW_PROMPT = "Enter row:";
 	public static final String MSG_ENTER_COL_PROMPT = "Enter column:";
 	public static final String MSG_THANKS = "Thanks for Playing Tic-Tac-Toe.";
+	public static final String MSG_ENTER_SIZE_PROMPT = "Please enter the size greater than 1:";
 
 	public static final String ERR_INVALID_TYPE = "Please enter an integer only:";
 	public static final String ERR_POSITION_TAKEN = "This cell is already filled. Please re enter the cell: ";
@@ -37,6 +38,7 @@ public class Cons {
 	public static final char SEPARATOR_SPACE = ' ';
 	public static final char SEPARATOR_PIPE = '|';
 	public static final char SEPARATOR_MINUS = '-';
-	public static final char SEPARATOR_PLUS = '+';;
+	public static final char SEPARATOR_PLUS = '+';
+	
 
 }

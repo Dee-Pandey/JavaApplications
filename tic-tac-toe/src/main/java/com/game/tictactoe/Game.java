@@ -1,10 +1,14 @@
 package com.game.tictactoe;
 
-import com.game.tictactoe.constants.Cons;
+import com.game.tictactoe.constants.Constants;
 
 public class Game {
 
 	private GameBoard gameBoard;
+
+	public GameBoard getGameBoard() {
+		return gameBoard;
+	}
 
 	public void createGameBoard(int size) {
 		int sizeOfBoard = size + size - 1;
@@ -15,15 +19,15 @@ public class Game {
 			for (int j = 0; j < sizeOfBoard; j++) {
 				if (isEven(i)) {
 					if (isEven(j)) {
-						board[i][j] = Cons.SEPARATOR_SPACE;
+						board[i][j] = Constants.SEPARATOR_SPACE;
 					} else {
-						board[i][j] = Cons.SEPARATOR_PIPE;
+						board[i][j] = Constants.SEPARATOR_PIPE;
 					}
 				} else {
 					if (isEven(j)) {
-						board[i][j] = Cons.SEPARATOR_MINUS;
+						board[i][j] = Constants.SEPARATOR_MINUS;
 					} else {
-						board[i][j] = Cons.SEPARATOR_PLUS;
+						board[i][j] = Constants.SEPARATOR_PLUS;
 					}
 				}
 			}
@@ -33,10 +37,10 @@ public class Game {
 
 	public void startGame() {
 		gameBoard.display();
-		System.out.println(Cons.MSG_BOARD_CREATION_SUCCESS);
+		System.out.println(Constants.MSG_BOARD_CREATION_SUCCESS);
 
-		Player playerX = new Player(Cons.PLAYER_X, this.gameBoard);
-		Player playerO = new Player(Cons.PLAYER_O, this.gameBoard);
+		Player playerX = new Player(Constants.PLAYER_X, this.gameBoard);
+		Player playerO = new Player(Constants.PLAYER_O, this.gameBoard);
 		Judge judge = new Judge(this.gameBoard);
 
 		while (true) {
@@ -53,7 +57,6 @@ public class Game {
 			}
 		}
 
-		System.out.println(Cons.MSG_THANKS);
 	}
 
 	private boolean isEven(int coordinate) {

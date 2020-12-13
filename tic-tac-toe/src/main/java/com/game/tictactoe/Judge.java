@@ -3,7 +3,7 @@ package com.game.tictactoe;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.game.tictactoe.constants.Cons;
+import com.game.tictactoe.constants.Constants;
 import com.game.tictactoe.exception.GameException;
 
 public class Judge {
@@ -17,7 +17,6 @@ public class Judge {
 	public boolean isGameComplete() {
 		String result = "";
 		int positionsFilled = 0;
-		boolean flag = false;
 		char[][] gameGrid = gameBoard.getGameGrid();
 		Set<Character> winningRow = new HashSet<>();
 		Set<Character> winningCol = new HashSet<>();
@@ -64,19 +63,19 @@ public class Judge {
 			}
 
 			for (int j = 0; j <= gameBoard.getSizeOfBoard(); j += 2) {
-				if (gameGrid[i][j] != Cons.CHAR_SPACE)
+				if (gameGrid[i][j] != Constants.CHAR_SPACE)
 					positionsFilled += 1;
 			}
 		}
 		if (positionsFilled == (gameBoard.getSizeOfSquare() * gameBoard.getSizeOfSquare()) && result.isEmpty()) {
-			throw new GameException(Cons.MSG_NONE_WINS);
+			throw new GameException(Constants.MSG_NONE_WINS);
 		}
 
 		return result.isEmpty() ? false : true;
 	}
 
 	private boolean isStripComplete(Set<Character> strip) {
-		return strip.size() == 1 && !strip.contains(Cons.CHAR_SPACE);
+		return strip.size() == 1 && !strip.contains(Constants.CHAR_SPACE);
 	}
 
 }
