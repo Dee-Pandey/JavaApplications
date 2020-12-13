@@ -1,6 +1,7 @@
 package com.game.tictactoe;
 
 import com.game.tictactoe.constants.Constants;
+import com.game.tictactoe.constants.PlayerSymbol;
 
 public class Game {
 
@@ -39,8 +40,8 @@ public class Game {
 		gameBoard.display();
 		System.out.println(Constants.MSG_BOARD_CREATION_SUCCESS);
 
-		Player playerX = new Player(Constants.PLAYER_X, this.gameBoard);
-		Player playerO = new Player(Constants.PLAYER_O, this.gameBoard);
+		Player playerX = new Player(PlayerSymbol.X, this.gameBoard);
+		Player playerO = new Player(PlayerSymbol.O, this.gameBoard);
 		Judge judge = new Judge(this.gameBoard);
 
 		while (true) {

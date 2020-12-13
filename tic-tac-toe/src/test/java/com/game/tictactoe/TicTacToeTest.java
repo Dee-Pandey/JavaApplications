@@ -2,6 +2,7 @@ package com.game.tictactoe;
 
 import org.junit.Test;
 
+import com.game.tictactoe.constants.PlayerSymbol;
 import com.game.tictactoe.exception.GameException;
 
 import junit.framework.TestCase;
@@ -23,15 +24,15 @@ public class TicTacToeTest
 	{
 		Game game = new Game();
 		game.createGameBoard(3);
-		game.getGameBoard().fillPlayerSymbolAtPosition(1, 1, "X");
-		game.getGameBoard().fillPlayerSymbolAtPosition(1, 2, "O");
-		game.getGameBoard().fillPlayerSymbolAtPosition(1, 3, "X");
-		game.getGameBoard().fillPlayerSymbolAtPosition(2, 1, "O");
-		game.getGameBoard().fillPlayerSymbolAtPosition(2, 3, "X");
-		game.getGameBoard().fillPlayerSymbolAtPosition(2, 2, "O");
-		game.getGameBoard().fillPlayerSymbolAtPosition(3, 2, "X");
-		game.getGameBoard().fillPlayerSymbolAtPosition(3, 3, "O");
-		game.getGameBoard().fillPlayerSymbolAtPosition(3, 1, "X");
+		game.getGameBoard().fillPlayerSymbolAtPosition(1, 1, PlayerSymbol.X);
+		game.getGameBoard().fillPlayerSymbolAtPosition(1, 2, PlayerSymbol.O);
+		game.getGameBoard().fillPlayerSymbolAtPosition(1, 3, PlayerSymbol.X);
+		game.getGameBoard().fillPlayerSymbolAtPosition(2, 1, PlayerSymbol.O);
+		game.getGameBoard().fillPlayerSymbolAtPosition(2, 3, PlayerSymbol.X);
+		game.getGameBoard().fillPlayerSymbolAtPosition(2, 2, PlayerSymbol.O);
+		game.getGameBoard().fillPlayerSymbolAtPosition(3, 2, PlayerSymbol.X);
+		game.getGameBoard().fillPlayerSymbolAtPosition(3, 3, PlayerSymbol.O);
+		game.getGameBoard().fillPlayerSymbolAtPosition(3, 1, PlayerSymbol.X);
 		Judge judge=null;
 		try
 		{
@@ -59,9 +60,9 @@ public class TicTacToeTest
 	{
 		Game game = new Game();
 		game.createGameBoard(3);
-		game.getGameBoard().fillPlayerSymbolAtPosition(1, 1, "X");
-		game.getGameBoard().fillPlayerSymbolAtPosition(1, 2, "X");
-		game.getGameBoard().fillPlayerSymbolAtPosition(1, 3, "X");
+		game.getGameBoard().fillPlayerSymbolAtPosition(1, 1, PlayerSymbol.X);
+		game.getGameBoard().fillPlayerSymbolAtPosition(1, 2, PlayerSymbol.X);
+		game.getGameBoard().fillPlayerSymbolAtPosition(1, 3, PlayerSymbol.X);
 		Judge judge = new Judge(game.getGameBoard());
 		
 		assertEquals(true, judge.isGameComplete());

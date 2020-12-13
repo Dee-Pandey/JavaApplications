@@ -1,7 +1,5 @@
 package com.game.tictactoe.constants;
 
-import com.game.tictactoe.Player;
-
 public class Constants {
 
 	/**
@@ -10,8 +8,6 @@ public class Constants {
 	public static final String MSG_WINS = "\nPLAYER %s WON\n";
 	public static final String MSG_NONE_WINS = "GAME ENDS WITH A DRAW";
 
-	public static final String PLAYER_X = "X";
-	public static final String PLAYER_O = "O";
 	public static final char CHAR_X = 'X';
 	public static final char CHAR_O = 'O';
 	public static final char CHAR_SPACE = ' ';

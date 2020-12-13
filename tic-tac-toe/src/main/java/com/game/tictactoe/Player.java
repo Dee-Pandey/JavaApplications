@@ -3,14 +3,15 @@ package com.game.tictactoe;
 import java.util.Scanner;
 
 import com.game.tictactoe.constants.Constants;
+import com.game.tictactoe.constants.PlayerSymbol;
 
 public class Player {
 
 	private GameBoard gameBoard;
-	private String playerName;
+	private PlayerSymbol playerName;
 
-	public Player(String playerName, GameBoard gameBoard) {
-		this.playerName = playerName;
+	public Player(PlayerSymbol x, GameBoard gameBoard) {
+		this.playerName = x;
 		this.gameBoard = gameBoard;
 	}
 
